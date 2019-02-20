@@ -38,7 +38,7 @@ public class Controller {
 	@RequestMapping("/circulo/getAll")
 	public Circulo getCirculos() {
 
-		Forma circulo = FabricaForma.crearForma(Tipo.CIRCULO);
+		//Forma circulo = FabricaForma.crearForma(Tipo.CIRCULO);
 		circulo.setAltura(1);
 		circulo.setDiámetro(2);
 		circulo.setBase(3);
@@ -52,7 +52,7 @@ public class Controller {
 	@RequestMapping("/triangulo/getAll")
 	public Triangulo getTriangulos() {
 
-		Forma triangulo = FabricaForma.crearForma(Tipo.TRIANGULO);
+		//Forma triangulo = FabricaForma.crearForma(Tipo.TRIANGULO);
 		triangulo.setAltura(1);
 		triangulo.setDiámetro(2);
 		triangulo.setBase(3);
@@ -68,20 +68,20 @@ public class Controller {
 	@RequestMapping("/cuadrado/getAll")
 	public List<Cuadrado> getCuadrados() {
 
-		Forma cuadrado = FabricaForma.crearForma(Tipo.CUADRADO);
+		//Forma cuadrado = FabricaForma.crearForma(Tipo.CUADRADO);
 		cuadrado.setAltura(1);
 		cuadrado.setDiámetro(2);
 		cuadrado.setBase(3);
 		cuadrado.setSuperficie(4);
-		cuadrado.setTipoForma(Tipo.CIRCULO);
+		cuadrado.setTipoForma(Tipo.CUADRADO);
 		
 		
-		Forma cuadrado2 = FabricaForma.crearForma(Tipo.CUADRADO);
+		Forma cuadrado2 = cuadrado;
 		cuadrado2.setAltura(5);
 		cuadrado2.setDiámetro(6);
 		cuadrado2.setBase(7);
 		cuadrado2.setSuperficie(8);
-		cuadrado2.setTipoForma(Tipo.CIRCULO);
+		cuadrado2.setTipoForma(Tipo.CUADRADO);
 
 		List<Cuadrado> listaCuadrados = new ArrayList<Cuadrado>();
 		listaCuadrados.add((Cuadrado) cuadrado);
@@ -94,12 +94,12 @@ public class Controller {
 	@PostMapping(path="/cuadrado/post",produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE} )
 	public Forma postCuadrado() {
 
-		Forma cuadrado = FabricaForma.crearForma(Tipo.CUADRADO);
+		//Forma cuadrado = FabricaForma.crearForma(Tipo.CUADRADO);
 		cuadrado.setAltura(1);
 		cuadrado.setDiámetro(2);
 		cuadrado.setBase(3);
 		cuadrado.setSuperficie(4);
-		cuadrado.setTipoForma(Tipo.CIRCULO);
+		cuadrado.setTipoForma(Tipo.CUADRADO);
 
 
 		return (Cuadrado) cuadrado;
@@ -109,12 +109,12 @@ public class Controller {
 	@PostMapping(path="/triangulo/post",produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE} )
 	public Forma postTriangulo() {
 
-		Forma triangulo = FabricaForma.crearForma(Tipo.TRIANGULO);
+		//Forma triangulo = FabricaForma.crearForma(Tipo.TRIANGULO);
 		triangulo.setAltura(1);
 		triangulo.setDiámetro(2);
 		triangulo.setBase(3);
 		triangulo.setSuperficie(4);
-		triangulo.setTipoForma(Tipo.CIRCULO);
+		triangulo.setTipoForma(Tipo.TRIANGULO);
 
 
 		return (Triangulo) triangulo;
@@ -124,7 +124,7 @@ public class Controller {
 	@PostMapping(path="/circulo/post",produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE} )
 	public Forma postCirculo() {
 
-		Forma circulo = FabricaForma.crearForma(Tipo.CIRCULO);
+		//Forma circulo = FabricaForma.crearForma(Tipo.CIRCULO);
 		circulo.setAltura(1);
 		circulo.setDiámetro(2);
 		circulo.setBase(3);

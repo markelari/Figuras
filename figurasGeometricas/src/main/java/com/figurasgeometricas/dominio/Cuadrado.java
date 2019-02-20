@@ -1,10 +1,12 @@
 package com.figurasgeometricas.dominio;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import com.figurasgeometricas.dominio.FabricaForma.Tipo;
 
 @Component
+@Scope("prototype")
 public class Cuadrado extends Forma implements FormaInterface {
 
 	@Override
